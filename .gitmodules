@@ -1,0 +1,3 @@
+[submodule "contracts/Case/src"]
+	path = contracts/Case/src
+	url = https://github.com/arbiter-adr/case-contracts
