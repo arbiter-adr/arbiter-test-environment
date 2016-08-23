@@ -1,3 +1,20 @@
-import { Cases } from './config';
+import config from './config';
+import DeployEngine from 'redux-solidity/dist/DeployEngine';
 
-console.log(Cases);
+
+// Deploy Arbiter Config first;
+
+
+
+
+
+
+let ArbiterConfig = new DeployEngine(config['ArbiterConfig']);
+
+ArbiterConfig.deploy().then((deployed) => {
+  return ArbiterConfig.saveDeployed();
+}).then((saved) => {
+  console.log(`ArbiterConfig contract has been deployed.`);
+}).catch((error) => {
+  console.log(error);
+});

@@ -4,7 +4,9 @@
   "description": "Arbiter Test Environment",
   "main": "index.js",
   "scripts": {
-    "deploy-contracts": "babel-node ./contracts/Case/deploy.js --presets es2015,stage-0"
+    "deploy-contracts": "babel-node ./contracts/Case/deploy.js --presets es2015,stage-0",
+    "test-ArbiterConfig" : "mocha --compilers js:babel-core/register ./tests/ArbiterConfig/index.js",
+    "test-Cases" : "mocha --compilers js:babel-core/register ./tests/Cases/index.js"
   },
   "author": "",
   "license": "ISC",
